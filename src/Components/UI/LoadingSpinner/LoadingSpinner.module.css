@@ -1,0 +1,14 @@
+.spinner-div {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.spinner-div h1 {
+    font-size: 1.5rem;
+    margin-top: 1em;
+    color: #fcba03;
+}

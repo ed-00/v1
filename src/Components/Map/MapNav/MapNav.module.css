@@ -1,0 +1,20 @@
+.map-nav {
+    min-width: 35%;
+    min-height: var(--seach-height);
+    position: absolute;
+    top: 3rem;
+    left: 6rem;
+    z-index: 10;
+    background-color: var(--white);
+    background: var(--white) 0% 0% no-repeat padding-box;
+    background: #F1F1F1 0% 0% no-repeat padding-box;
+    border-radius: 3rem;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.seach-menu{
+    display: flex;
+    justify-content: space-evenly;
+}

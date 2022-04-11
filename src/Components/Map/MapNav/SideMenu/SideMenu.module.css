@@ -1,0 +1,15 @@
+.menu-list {
+    border-right: 1px solid var(--gray);
+    height: auto;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-list li {
+    border-bottom: 1px solid var(--gray);
+    padding: 1rem;
+}
+.menu-list li a{
+    color: var(--black)
+}

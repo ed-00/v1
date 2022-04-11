@@ -1,0 +1,18 @@
+.search {
+    width: 85%;
+    height: var(--seach-height);
+}
+.search input{
+    border: none; 
+    background-color: transparent;
+    font: var(--font-style-normal) normal normal 20px/var(--line-spacing-1) var(--font-family-arial);
+    letter-spacing: var(--character-spacing-0);
+    color: var(--black);
+    text-align: left;
+    font: normal normal normal 20px/1px Arial;
+    letter-spacing: 0px;
+    color: #1A1A1A;
+    text-transform: capitalize;
+    height: var(--seach-height);
+    width: 100%;
+}

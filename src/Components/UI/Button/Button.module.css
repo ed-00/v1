@@ -1,0 +1,11 @@
+.button {
+    background-color: var(--green);
+    border-radius: 3rem;
+    color: var(--black);
+    font-weight: 900;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+}
+.button:hover{
+    background-color: var(--yellow);
+}

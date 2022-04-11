@@ -1,0 +1,58 @@
+.menu {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 1rem;
+    z-index: 100;
+}
+
+.logo {
+    color: var(--green);
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu ul li {
+    list-style: none;
+    margin-left: 5rem;
+}
+
+.active {
+    display: inline-block;
+    color: var(--green);
+    font-size: 1rem;
+    background-color: transparent;
+    border: none;
+    font: 16px/18px Arial;
+}
+
+
+
+.active:hover {
+    color: var(--white);
+}
+
+.button {
+    background-color: var(--green);
+    border-radius: 3rem;
+    color: var(--black);
+    font-weight: 900;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+.button:hover {
+    background-color: var(--yellow);
+}

@@ -1,0 +1,37 @@
+
+.icon {
+    position: relative;
+    left: 3rem;
+    top: -9rem;
+    height: 2rem;
+}
+
+.picture {
+    width: 9rem;
+    height: 9rem;
+    object-fit: cover;
+    border-radius: 2rem;
+
+}
+
+.button {
+    width: 9rem;
+    height: 9rem;
+}
+
+.button h1 {
+    position: relative;
+    top: -5rem;
+    color: var(--gray);
+    font-size: 1rem;
+    background-color: var(--black);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    -webkit-border-bottom-right-radius: 31px;
+    -webkit-border-bottom-left-radius: 31px;
+    -moz-border-radius-bottomright: 31px;
+    -moz-border-radius-bottomleft: 31px;
+    border-bottom-right-radius: 31px;
+    border-bottom-left-radius: 31px;
+    font-weight: 900;
+}
