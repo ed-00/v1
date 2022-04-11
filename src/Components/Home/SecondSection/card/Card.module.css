@@ -1,0 +1,20 @@
+.card{
+    width: 94%; /*fixa senare; tillfllig*/
+    margin: 0 auto;
+    height: 747px;
+    
+    background: #368282 0% 0% no-repeat padding-box;
+    opacity: 1;
+    }
+    
+    .subcard{
+    width: 35%;
+    height: 88%;
+    left: 3%;
+    top: 5%;
+    z-index: 10;
+    position: relative;
+    
+    background: var(--green) 0% 0% no-repeat padding-box;
+    opacity: 1;
+    }
