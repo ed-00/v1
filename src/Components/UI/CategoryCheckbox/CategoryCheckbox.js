@@ -12,8 +12,7 @@ const CategoryCheckbox = (props) => {
         className={classes.input}
         type="checkbox"
         id={props.label}
-        value={props.label}
-        checked={props.checked}
+        checked={props.checked === undefined ? true : props.checked}
         onChange={changeHandler}
       />
       <label htmlFor={props.label}>{props.label}</label>

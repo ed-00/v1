@@ -8,9 +8,11 @@ import reportWebVitals from "./reportWebVitals";
 const rootDiv = document.getElementById("root");
 const Root = createRoot(rootDiv);
 Root.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
+  <React.StrictMode>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </React.StrictMode>
 );
 
 reportWebVitals();

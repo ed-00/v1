@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import classes from "./FilterMenu.module.css";
 import MapSearch from "../MapNav/MapSearch/MapSearch";
-import Button from "../../UI/Button/Button";
 import compass from "../../../icons/location.svg";
 import close from "../../../icons/close.svg";
 import { Slider } from "@mui/material";
@@ -17,9 +16,10 @@ const FilterMenu = ({
   onCancel,
 }) => {
   const [useCurrentP, setUseCurrentP] = useState(false);
-  const [poistion, setPositon] = useState(null);
   const checkHandler = () => {
-    setUseCurrentP((state) => !state);
+    setUseCurrentP((state) => {
+      return !state;
+    });
   };
 
   const calcDist = useCallback(
@@ -57,14 +57,11 @@ const FilterMenu = ({
           lat: position.coords.latitude,
           lng: position.coords.longitude,
         };
-        setPositon(cordinates);
-        panTo(cordinates, true, 9.5);
         calcDist(cordinates);
+        panTo(cordinates, true, 9.5);
       });
     }
-    return () => {
-      setPositon(null);
-    };
+    return () => {};
   }, [calcDist, panTo, useCurrentP]);
 
   return (
@@ -94,12 +91,10 @@ const FilterMenu = ({
             panTo(cordinates, true, 9.5);
           }}
           onClear={() => {
-            setPositon(null);
             setDistances([]);
             setMaxDist(100);
           }}
           onSelect={(cordinates) => {
-            setPositon(cordinates);
             calcDist(cordinates);
           }}
         />

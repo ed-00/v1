@@ -134,6 +134,10 @@ const Map = () => {
   // categories
   const [categoryCheckbox, setCategoryCheckbox] = useState([]);
   const [visibleCategory, setVisibleCategory] = useState([]);
+  const [pathsAreVisiable, setPathsAreVisiable] = useState({
+    walking: true,
+    biking: true,
+  });
 
   useEffect(() => {
     if (poiData) {
@@ -170,40 +174,45 @@ const Map = () => {
   const [poiPoints, setPoiPoints] = useState();
 
   useEffect(() => {
-    if (poiData) {
-      setPoiPoints((prevState) =>
-        poiData.Categories.map((el) => {
-          return [
-            ...prevState,
+    try {
+      if (poiData) {
+        setPoiPoints((prevState) =>
+          poiData.Categories.map((el) => {
+            return [
+              ...prevState,
 
-            el.points.map((point, index) => {
-              return (
-                <Marker
-                  key={index + Math.random()}
-                  icon={{
-                    url: el.icon,
-                    scaledSize: new window.google.maps.Size(40, 40),
-                  }}
-                  visible={true}
-                  position={{ lat: point.lat, lng: point.lng }}
-                  onClick={() => {
-                    panTo({ lat: point.lat, lng: point.lng + 0.019 }, true);
-                    setMarkerSelected(point);
-                    setDirectionRes(null);
-                    setDirectionMode(false);
-                    setAddPoint(null);
-                    setCenterPin(null);
-                    setFilter(false);
-                    setMaxDist(100);
-                    setDistances([]);
-                  }}
-                />
-              );
-            }),
-          ];
-        })
-      );
+              el.points.map((point, index) => {
+                return (
+                  <Marker
+                    key={index + Math.random()}
+                    icon={{
+                      url: el.icon,
+                      scaledSize: new window.google.maps.Size(40, 40),
+                    }}
+                    visible={true}
+                    position={{ lat: point.lat, lng: point.lng }}
+                    onClick={() => {
+                      panTo({ lat: point.lat, lng: point.lng + 0.019 }, true);
+                      setMarkerSelected(point);
+                      setDirectionRes(null);
+                      setDirectionMode(false);
+                      setAddPoint(null);
+                      setCenterPin(null);
+                      setFilter(false);
+                      setMaxDist(100);
+                      setDistances([]);
+                    }}
+                  />
+                );
+              }),
+            ];
+          })
+        );
+      }
+    } catch (error) {
+      console.log(error);
     }
+
     return () => {
       setPoiPoints([]);
     };
@@ -224,7 +233,33 @@ const Map = () => {
 
       {categoryCheckbox && (
         <div className={classes.checkboxes}>
-          <ul className={classes[`ks-cboxtags`]}>{categoryCheckbox}</ul>
+          <ul className={classes[`ks-cboxtags`]}>
+            <CategoryCheckbox
+              checked={pathsAreVisiable.walking}
+              label="walking Path"
+              onChange={() => {
+                setPathsAreVisiable((state) => {
+                  let prevState = state;
+                  prevState.walking = !prevState.walking;
+                  return { ...prevState };
+                });
+              }}
+            />
+
+            <CategoryCheckbox
+              checked={pathsAreVisiable.biking}
+              label="Biking Path"
+              onChange={() => {
+                setPathsAreVisiable((state) => {
+                  let prevState = state;
+                  prevState.biking = !prevState.biking;
+                  return { ...prevState };
+                });
+              }}
+            />
+
+            {categoryCheckbox}
+          </ul>
         </div>
       )}
 
@@ -303,6 +338,7 @@ const Map = () => {
           })}
         {directionsRes && <DirectionsRenderer directions={directionsRes} />}
         {hikingData &&
+          pathsAreVisiable.walking &&
           !hikingDataIsLoading &&
           hikingData.map((line, index) => {
             const options = {
@@ -322,6 +358,7 @@ const Map = () => {
             return <Polyline key={index} path={line.posts} options={options} />;
           })}
         {bikingData &&
+          pathsAreVisiable.biking &&
           !bikingDataIsLoading &&
           bikingData.map((line, index) => {
             const options = {
