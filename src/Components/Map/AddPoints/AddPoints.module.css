@@ -1,0 +1,69 @@
+.addpoint {
+    position: absolute;
+    height: auto;
+    width: 28rem;
+    max-width: 85%;
+    right: -12.5rem;
+    bottom: -12.5rem;
+    z-index: 10;
+    background-color: var(--white);
+    border-radius: 5.2rem 5.2rem 0px 5.2rem;
+    padding: 2rem;
+}
+
+.addpoint h2 {
+    text-align: left;
+    color: var(--gray);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    text-align: center;
+}
+
+.buttonDiv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.buttonDiv button {
+    background-color: var(--black);
+    color: var(--green);
+    border-radius: 1rem;
+    height: 7rem;
+    width: 30%;
+    max-width: 8rem;
+    max-height: 8rem;
+    margin: 0.5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.buttonDiv button img {
+    width: 30%;
+    height: auto;
+}
+
+.buttonDiv button:hover {
+    border: 4px solid var(--green);
+}
+
+.close img {
+
+    height: 1.6rem;
+    width: auto;
+}
+
+.add-Category-button {
+    width: 100%;
+    margin: 1rem auto;
+}
+
+@media (max-device-width: 414px) {
+    .buttonDiv {
+        width: 100%
+    }
+}

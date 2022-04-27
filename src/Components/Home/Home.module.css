@@ -1,5 +1,7 @@
 .home {
-    height: 350vh;
-    background: transparent conic-gradient(from -61deg at 45% 45%, #353535 0.00%, #58FFFF 100.00%) 0% 0% no-repeat padding-box;
-    opacity: 1;
+  height: 330vh;
+  background: transparent
+    conic-gradient(from 265deg at 45% 45%, #000000 0%, #58ffff 100%) 0% 0%
+    no-repeat padding-box;
+  opacity: 1;
 }

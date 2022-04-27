@@ -1,24 +1,36 @@
 import React from "react";
 import classes from "./Nav.module.css";
-import{Link} from "react-router-dom"
+import { Link } from "react-router-dom";
+import {Link as ScrollLink} from 'react-scroll';
 const Nav = () => {
+  const moveHandler = () => {
+    
+  };
   return (
     <nav className={classes.menu}>
-      <button href="#" className={classes.logo}>
+      <ScrollLink to="FirstSection" spy={true} smooth={true} className={classes.logo}>
         Nedre Dalälven
-      </button>
+      </ScrollLink>
       <ul>
         <li>
-          <button className={classes.active}>Hem</button>
+          <ScrollLink to="FirstSection" spy={true} smooth={true} className={classes.active}>
+            Hem
+          </ScrollLink>
         </li>
         <li>
-          <button className={classes.active}>Fakta</button>
+          <ScrollLink to="SecondSection" spy={true} smooth={true} className={classes.active}>
+            Fakta
+          </ScrollLink>
         </li>
         <li>
-          <button className={classes.active}>Om oss</button>
+          <ScrollLink to="ThirdSection" spy={true} smooth={true} className={classes.active}>
+            Om oss
+          </ScrollLink>
         </li>
         <li>
-          <Link className={classes.button} to="/explore">Utforska</Link>
+          <Link className={classes.button} to="/explore">
+            Utforska
+          </Link>
         </li>
       </ul>
     </nav>

@@ -1,0 +1,555 @@
+{
+  "Categories": [
+    {
+      "type": "Canoe",
+      "icon": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1650970770/POI-Icons/canoe_odjcwy.svg",
+      "points": {
+        "0": {
+          "name": "Bårbyhällan",
+          "lat": 60.238677,
+          "lng": 16.814736,
+          "description": "Rastplats med vindskydd och eldstad. Finns även möjlighet att sätta upp tält på platsen. Timrat vindskydd med eldstad.",
+          "imgs": [
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864936/POI-imgs/br%C3%A5byh%C3%A4llan-1_bas1lv.jpg"
+            },
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864913/POI-imgs/br%C3%A5byh%C3%A4llan-2_wt0o8j.jpg"
+            },
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864914/POI-imgs/br%C3%A5byh%C3%A4llan-3_zghhts.jpg"
+            }
+          ]
+        },
+        "1": {
+          "name": "Båtsportklubben",
+
+          "lat": 60.177689,
+          "lng": 16.801658,
+          "description": "",
+          "imgs": [
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864911/POI-imgs/B%C3%A5tsportklubben-1_brnywh.jpg"
+            },
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864912/POI-imgs/B%C3%A5tsportklubben-2_jhcnji.jpg"
+            },
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864912/POI-imgs/B%C3%A5tsportklubben-3_rnmu7w.jpg"
+            }
+          ]
+        },
+        "2": {
+          "name": "Brattnäset",
+
+          "lat": 60.219227,
+          "lng": 16.847813,
+          "description": "Rastplats med vindskydd och eldstad. Fast bord och bänkar i vindskyddet. Vedförråd på baksidan. Eldstaden har justerbart galler men även krok att hänga gryta eller kittel i. Ligger fint ute på udden.",
+          "imgs": [
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864914/POI-imgs/Brattn%C3%A4set-1_zfrm8p.jpg"
+            },
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864914/POI-imgs/Brattn%C3%A4set-2_xyodi0.jpg"
+            },
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864913/POI-imgs/Brattn%C3%A4set-3_h04ozg.jpg"
+            }
+          ]
+        },
+        "3": {
+          "name": "Dragsheden öst",
+
+          "lat": 60.236701,
+          "lng": 16.791154,
+          "description": "Rastplats med vindskydd och eldstad. Fast bord och bänkar i vindskyddet. Ligger på en ö med väldigt fin utsikt mot Bårbyhällan.",
+          "imgs": [
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864921/POI-imgs/Dragsheden-%C3%B6st-1_ccwaar.jpg"
+            },
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864922/POI-imgs/Dragsheden-%C3%B6st-2_ndch3k.jpg"
+            },
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864927/POI-imgs/Dragsheden-%C3%B6st-3_ohxcwq.jpg"
+            }
+          ]
+        },
+        "4": {
+          "name": "Dragsheden väst",
+
+          "lat": 60.238,
+          "lng": 16.78638,
+          "description": "Rastplats med vindskydd och eldstad. Fast bord och bänkar i vindskyddet. Ligger på en ö med väldigt fin utsikt mot Ön.",
+          "imgs": [
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864910/POI-imgs/Dragsheden-v%C3%A4st-1_cbxs40.jpg"
+            },
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864910/POI-imgs/Dragsheden-v%C3%A4st-2_sphfal.jpg"
+            },
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864911/POI-imgs/Dragsheden-v%C3%A4st-3_yugivu.jpg"
+            }
+          ]
+        },
+        "5": {
+          "name": "Göknäset",
+
+          "lat": 60.197745,
+          "lng": 16.748013,
+          "description": "Raststuga med 8 bäddar. Öppen året runt. Stugan är öppen för övernattning. Du ansvarar för städning och ska se till att dörrar och fönster är stängda när du lämnar stugan. Se till att ev. eldar brunnit ut och är släckta. Sopor tar du med dig. Stugan kan inte bokas på förhand och de gäster som anländer för att övernatta ska beredas plats. Bäddarna har inte madrasser, vi rekommenderar var och en att ta med sig eget liggunderlag och sovsäck. Det finns inte el eller vatten. Stugan har dass. Ved finns.",
+          "imgs": [
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864921/POI-imgs/G%C3%B6kn%C3%A4set-1_gnjmiv.jpg"
+            },
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864915/POI-imgs/G%C3%B6kn%C3%A4set-2_sfaupi.jpg"
+            },
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864917/POI-imgs/G%C3%B6kn%C3%A4set-3_badmhh.webp"
+            }
+          ]
+        },
+        "6": {
+          "name": "Östa Camping",
+
+          "lat": 60.173351,
+          "lng": 16.760285,
+          "description": "Här är en camping intill Dalälven, stranden är en 5 kilometer lång riveriera. Vi finns i ett naturreservat, med massor av fina vandringsleder, sandstränder, en härlig natur och närhet till både upplevelser samt kultur av olika slag. Campingen är öppen året runt.",
+          "imgs": [
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864928/POI-imgs/%C3%96sta-Camping-1_rkcmdn.jpg"
+            },
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864930/POI-imgs/%C3%96sta-Camping-2_x2xljp.jpg"
+            },
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864931/POI-imgs/%C3%96sta-Camping-3_usn74x.jpg"
+            }
+          ]
+        },
+        "7": {
+          "name": "Östa norr",
+
+          "lat": 60.173351,
+          "lng": 16.791122,
+          "description": "Östa är en by i Nora socken, Heby kommun, Uppsala län, belägen på en halvö vid Dalälven. Byn omtalas första gången i en odaterad förteckning över frälsegods från omkring 1500.",
+          "imgs": [
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864929/POI-imgs/%C3%96sta-norr-1_gb1opy.jpg"
+            },
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864929/POI-imgs/%C3%96sta-norr-2_t76ss8.jpg"
+            },
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864930/POI-imgs/%C3%96sta-norr-3_f8m2x0.jpg"
+            }
+          ]
+        },
+        "8": {
+          "name": "Östa väst",
+
+          "lat": 60.176483,
+          "lng": 16.785071,
+          "description": "Östa naturreservat är ett utflyktsmål som passar hela familjen, här finns något för alla. Östa naturreservat är det enda reservatet i Heby kommun som kommunen själva äger, förvaltar och har tillsynen för. Reservatet sträcker sig från Östaholm i norr till Ingboviken i söder och här finns det gott om vandringsleder och långa badstränder. Här finns även en camping och båthamn. Tillgång till grillplatser finns vid Linsjön, båtklubben, Västerudd och på Norra stranden. I receptionen på Östa camping finns möjlighet att hyra kanot och båt.",
+          "imgs": [
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864936/POI-imgs/%C3%96sta-v%C3%A4st-1_savjqe.jpg"
+            },
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864938/POI-imgs/%C3%96sta-v%C3%A4st-2_rojxzt.jpg"
+            },
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864934/POI-imgs/%C3%96sta-v%C3%A4st-3_macxgc.jpg"
+            }
+          ]
+        },
+        "9": {
+          "name": "Sandön",
+
+          "lat": 60.209724,
+          "lng": 16.788901,
+          "description": "Mitt ute på en ö i nationalparken, endast nåbar med båd eller kanot, så ligger sandön. Med vindskydd på ön och sikt både öster och väster ut så är det här ett givet besöksmål.",
+          "imgs": [
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864939/POI-imgs/Sand%C3%B6n-1_lrtwff.jpg"
+            },
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864943/POI-imgs/Sand%C3%B6n-2_icx67q.jpg"
+            },
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864938/POI-imgs/Sand%C3%B6n-3_lqiyvb.jpg"
+            }
+          ]
+        },
+        "10": {
+          "name": "Skekarsbo",
+
+          "lat": 60.212219,
+          "lng": 16.849755,
+          "description": "Det 20 meter höga tornet i Skekarsbo bjuder på en fantastisk utsikt, med chans att se bland annat havsörn och fiskgjuse. Skekarsbo ligger mellan Gysinge och Tärnsjö, längs nationalparkens östra sida. Utsikstornet i Skekarsbo nås från väg 56. Vägen är skyltad från Gäddsjö.",
+          "imgs": [
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864940/POI-imgs/Skekarsbo-1_aj6uiw.jpg"
+            },
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864940/POI-imgs/Skekarsbo-2_ncb0zj.jpg"
+            },
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864940/POI-imgs/Skekarsbo-3_xevhcp.jpg"
+            }
+          ]
+        },
+        "11": {
+          "name": "Strångnäs",
+
+          "lat": 60.216802,
+          "lng": 16.796916,
+          "description": "Tillgänglighetsanpassat vindskydd med vackert läge vid liten sandstrand. Ligger nära stor vändplan där det går att ställa bilen. Vedförråd och anordning för att klyva ved finns inne i vindskyddet. Eldstad med justerbart galler och krok för att hänga kittel. Ett bord finns numer inställt i vindskyddet.",
+          "imgs": [
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864941/POI-imgs/Str%C3%A5ngn%C3%A4s-1_e9mpox.jpg"
+            },
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864941/POI-imgs/Str%C3%A5ngn%C3%A4s-2_nf4ahj.jpg"
+            },
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864942/POI-imgs/Str%C3%A5ngn%C3%A4s-3_blhdtb.jpg"
+            }
+          ]
+        },
+        "12": {
+          "name": "Café Udden",
+
+          "lat": 60.286982,
+          "lng": 16.880171,
+          "description": "Café som även serverar lunch. Fin utsikt från vår altan över Gysingeforsarna.",
+          "imgs": [
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864922/POI-imgs/Caf%C3%A9-Udden-1_ww6hsy.jpg"
+            },
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864923/POI-imgs/Caf%C3%A9-Udden-2_blfajw.jpg"
+            },
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864920/POI-imgs/Caf%C3%A9-Udden-3_vkaheq.jpg"
+            }
+          ]
+        },
+        "13": {
+          "name": "Edsviken",
+
+          "lat": 60.281196,
+          "lng": 16.805992,
+          "description": "Idag kallas ett vattenområde utanför Färnebofjärdens camping Edsviken. Det är en vik av Dalälven och ingår i Färnebofjärdens nationalpark. Längst in i viken låg Gysinge bruks tegelverk fram till nedläggningen 1905 På den tiden hette området Gålsjön. Söder om campingen har Österfärnebo Baptistförsamling haft ett sommarhem kallat Edsviken. Det såldes 2012 till en privatperson.",
+          "imgs": [
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864912/POI-imgs/Edsviken-1_fxgk34.jpg"
+            },
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864911/POI-imgs/Edsviken-2_yw6pl4.jpg"
+            },
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864912/POI-imgs/Edsviken-3_fr2q4y.jpg"
+            }
+          ]
+        },
+        "14": {
+          "name": "Gärdsvekarna",
+
+          "lat": 60.261745,
+          "lng": 16.836784,
+          "description": "Raststuga med 4 bäddar. Öppen året runt. Stugan saknar el och vatten, bäddarna saknarmadrass. Torrdass och ved finns. Stugan är öppen för övernattning. Du ansvarar för städning och ska se till att dörrar och fönster är stängda när du lämnar stugan. Se till att ev. eldar brunnit ut och är släckta. Sopor tar du med dig. Stugan kan inte bokas på förhand och de gäster som anländer för att övernatta ska beredas plats. Bäddarna har inte madrasser, vi rekommenderar var och en att ta med sig eget liggunderlag och sovsäck. Det finns inte el eller vatten. Stugan har dass. Ved finns.",
+          "imgs": [
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864912/POI-imgs/G%C3%A4rdsvekarna-1_phwen9.jpg"
+            },
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864912/POI-imgs/G%C3%A4rdsvekarna-2_njbnx3.jpg"
+            },
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864913/POI-imgs/G%C3%A4rdsvekarna-3_lmuefr.jpg"
+            }
+          ]
+        },
+        "15": {
+          "name": "Gysinge",
+
+          "lat": 60.287094,
+          "lng": 16.885128,
+          "description": "Gysinge är ett samhälle i Sandvikens kommun, i Österfärnebo socken vid Dalälven intill gränsen mellan Gästrikland och Uppland. SCB har för bebyggelsen i orten avgränsat två småorter, namnsatta till Gysinge (norra delen) och Gysinge (södra delen) på varsin sida om Dalälven.",
+          "imgs": [
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864915/POI-imgs/Gysinge-1_kovwen.jpg"
+            },
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864915/POI-imgs/Gysinge-2_gbcxbs.jpg"
+            },
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864916/POI-imgs/Gysinge-3_qyj0rf.jpg"
+            }
+          ]
+        },
+        "16": {
+          "name": "Ista",
+
+          "lat": 60.253702,
+          "lng": 16.794437,
+          "description": "Ista är ett naturreservat i Sandvikens kommun i Gävleborgs län. Området är naturskyddat sedan 2000 och är 770 hektar stort. Reservatet omfattar mark och vatten i Dalävens nedre lopp och ligger i anslutning till Färnebofjärdens nationalpark. Reservatet består av älvängar och översvämmande skogar kring rullstensåsen Enköpingsåsen.",
+          "imgs": [
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864923/POI-imgs/Ista-1_nwevyk.jpg"
+            },
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864926/POI-imgs/Ista-2_bzbnkc.jpg"
+            },
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864923/POI-imgs/Ista-3_k3qgjh.jpg"
+            }
+          ]
+        },
+        "17": {
+          "name": "Karlhomen",
+
+          "lat": 60.26224,
+          "lng": 16.808814,
+          "description": "Rastplats med vindskydd och eldstad. Fast bord och bänkar i vindskyddet. Har en utsikt mot Nässja.",
+          "imgs": [
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864924/POI-imgs/Karlhomen-1_wuh1pw.jpg"
+            },
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864924/POI-imgs/Karlhomen-2_tsziwh.jpg"
+            },
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864926/POI-imgs/Karlhomen-3_mqqsxr.jpg"
+            }
+          ]
+        },
+        "18": {
+          "name": "Åshuvudet",
+
+          "lat": 60.366079,
+          "lng": 17.032521,
+          "description": "Rastplats med vindskydd och eldstad. Finns även möjlighet att sätta upp tält på platsen. Timrat vindskydd med eldstad. Nära till Hembyggårdens restaurang",
+          "imgs": [
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864910/POI-imgs/%C3%85shuvudet-1_iwetx4.jpg"
+            },
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864911/POI-imgs/%C3%85shuvudet-2_pjk3hu.jpg"
+            },
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864911/POI-imgs/%C3%85shuvudet-3_pq2pn0.jpg"
+            }
+          ]
+        },
+        "19": {
+          "name": "Festplatsen",
+
+          "lat": 60.320866,
+          "lng": 17.127278,
+          "description": "",
+          "imgs": []
+        },
+        "20": {
+          "name": "Gnupe",
+
+          "lat": 60.345797,
+          "lng": 17.056768,
+          "description": "Rastplats med vindskydd och eldstad. Fast bord och bänkar i vindskyddet.",
+          "imgs": [
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864913/POI-imgs/Gnupe-1_evy0yb.jpg"
+            },
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864913/POI-imgs/Gnupe-2_uwwpwi.jpg"
+            },
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864928/POI-imgs/Gnupe-3_o81bi5.jpg"
+            }
+          ]
+        },
+        "21": {
+          "name": "Hade",
+
+          "lat": 60.298647,
+          "lng": 17.03722,
+          "description": "Gräsrikt land med en rastplats och en fin utsikt",
+          "imgs": [
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864916/POI-imgs/Hade-1_bwxlkk.jpg"
+            },
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864920/POI-imgs/Hade-2_rya2zw.jpg"
+            },
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864920/POI-imgs/Hade-3_u7c9vo.jpg"
+            }
+          ]
+        },
+        "22": {
+          "name": "Korsnäset",
+
+          "lat": 60.319739,
+          "lng": 17.032853,
+          "description": "Gräsrikt land med en rastplats och en fin utsikt",
+          "imgs": [
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864925/POI-imgs/Korsn%C3%A4set-1_tgjuv5.jpg"
+            },
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864926/POI-imgs/Korsn%C3%A4set-2_x2eiqv.jpg"
+            },
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864928/POI-imgs/Korsn%C3%A4set-3_i7wtea.jpg"
+            }
+          ]
+        },
+        "23": {
+          "name": "Kvillanudden",
+
+          "lat": 60.371824,
+          "lng": 17.046833,
+          "description": "Kvillanudden är ett naturreservat i Gävle kommun i Gävleborgs län. Området är naturskyddat sedan 1973 och är 2 hektar stort. Reservatet ligger på en rullstensås som bildar en udde i Dalälven och består av gammal betesmark och blandskog. Reservatet skapades för att skydda områdets bestånd av masurbjörk.",
+          "imgs": [
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864928/POI-imgs/Kvillanudden-1_lof7fn.jpg"
+            },
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864930/POI-imgs/Kvillanudden-2_mnwmru.jpg"
+            },
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864928/POI-imgs/Kvillanudden-3_nhtjvw.jpg"
+            }
+          ]
+        },
+        "24": {
+          "name": "Östveda",
+
+          "lat": 60.383098,
+          "lng": 17.094887,
+          "description": "Östveda är en mycket gammal by i Hedesunda socken, Gävle kommun, belägen på en rullstensås med utsikt över Dalälven. Tidiga stavningar från 1541-1548 är Östueda, Österwedom och Östwedom. Namnet Östveda kan betyda östra skogen sett från centrum i Hedesunda.",
+          "imgs": [
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864935/POI-imgs/%C3%96stveda-1_kkfluu.jpg"
+            },
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864932/POI-imgs/%C3%96stveda-2_tzfhuq.jpg"
+            },
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864937/POI-imgs/%C3%96stveda-3_zlgsaw.jpg"
+            }
+          ]
+        },
+        "25": {
+          "name": "Sandsnäsbadet",
+
+          "lat": 60.350155,
+          "lng": 17.020365,
+          "description": "Sandnäsbadet ligger vid Dalälven. Här finns sandstrand, omklädningshytter, badrullstol, dass och gästbåtbrygga. Intill badet ligger restaurang Sandsnäs och Hedesunda camping med uthyrning av bastuflotte och kanot. Kontakta campingen för lån av badrullstol.",
+          "imgs": [
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864938/POI-imgs/Sandsn%C3%A4sbadet-1_muqmyx.jpg"
+            },
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864938/POI-imgs/Sandsn%C3%A4sbadet-2_s99exv.jpg"
+            },
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864939/POI-imgs/Sandsn%C3%A4sbadet-3_xewcna.jpg"
+            }
+          ]
+        },
+        "26": {
+          "name": "Södra Sundet",
+
+          "lat": 60.312009,
+          "lng": 17.037241,
+          "description": "Södra Sundet och Norra Fällöviken är perfekt vatten för en paddeltur. Härnösand, Höga Kusten.",
+          "imgs": [
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864942/POI-imgs/S%C3%B6dra-Sundet-1_aevzte.jpg"
+            },
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864941/POI-imgs/S%C3%B6dra-Sundet-2_wvyexy.jpg"
+            },
+            {
+              "src": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1649864943/POI-imgs/S%C3%B6dra-Sundet-3_ikhgv2.jpg"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Swim",
+      "icon": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1650970787/POI-Icons/swimIcon_i0rb0y.svg",
+      "points": [
+        {
+          "name": "OJ, du Hittade mig Please Dont Tell",
+
+          "lat": 0,
+          "lng": 0,
+          "description": "Den här projekten förtjänar +A and you know it",
+          "imgs": []
+        }
+      ]
+    },
+    {
+      "type": "Walk",
+      "icon": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1650970785/POI-Icons/restIcon_z7iqbr.svg",
+      "points": [
+        {
+          "name": "OJ, du Hittade mig Please Dont Tell",
+
+          "lat": 0,
+          "lng": 0,
+          "description": "Den här projekten förtjänar +A and you know it",
+          "imgs": []
+        }
+      ]
+    },
+    {
+      "type": "Bike",
+      "icon": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1650970752/POI-Icons/bikeIcon_hcg4su.svg",
+      "points": [
+        {
+          "name": "OJ, du Hittade mig Please Dont Tell",
+
+          "lat": 0,
+          "lng": 0,
+          "description": "Den här projekten förtjänar +A and you know it",
+          "imgs": []
+        }
+      ]
+    },
+    {
+      "type": "Rest",
+      "icon": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1650970785/POI-Icons/restIcon_z7iqbr.svg",
+      "points": [
+        {
+          "name": "OJ, du Hittade mig Please Dont Tell",
+
+          "lat": 0,
+          "lng": 0,
+          "description": "Den här projekten förtjänar +A and you know it",
+          "imgs": []
+        }
+      ]
+    },
+    {
+      "type": "Grill",
+      "icon": "https://res.cloudinary.com/djt2jlqzc/image/upload/v1650970731/POI-Icons/grillIcon_djb1lj.svg",
+      "points": [
+        {
+          "name": "OJ, du Hittade mig Please Dont Tell",
+
+          "lat": 0,
+          "lng": 0,
+          "description": "Den här projekten förtjänar +A and you know it",
+          "imgs": []
+        }
+      ]
+    }
+  ]
+}

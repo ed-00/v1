@@ -1,0 +1,97 @@
+.MarkerInfo {
+    position: absolute;
+    z-index: 10;
+    bottom: -41rem;
+    right: 0;
+    max-width: 40rem;
+    width: 100%;
+    background-color: var(--white);
+    border-radius: 1rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: scroll;
+
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 35%;
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+    color: var(--black);
+}
+
+.text h1 {
+    text-transform: capitalize;
+    color: var(--green);
+    margin-top: 1rem;
+}
+
+.text p {
+    text-align: center;
+    margin-top: 1rem;
+    color: var(--gray);
+}
+
+.image-container {
+    cursor: grab;
+    overflow-x: hidden;
+    cursor: grab;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.inner-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+}
+
+.img {
+    min-width: 40vh;
+    height: 28rem;
+    margin: 0 1rem;
+    display: flex;
+    align-items: center;
+
+}
+
+.img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.exitBtn {
+    position: relative;
+    left: -47%;
+    top: 10px;
+    cursor: pointer;
+}
+
+.no-img {
+    min-width: 40vh;
+    height: 28rem;
+    margin: 0 1rem;
+    display: flex;
+    align-items: center;
+
+}
+
+.no-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.button {
+    margin-top: 1rem;
+}

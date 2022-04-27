@@ -1,20 +1,28 @@
 .map-nav {
-    min-width: 35%;
+    width: 80%;
+    max-width: 40rem;
     min-height: var(--seach-height);
     position: absolute;
-    top: 3rem;
-    left: 6rem;
+    top: 2rem;
+    left: 1rem;
     z-index: 10;
     background-color: var(--white);
-    background: var(--white) 0% 0% no-repeat padding-box;
-    background: #F1F1F1 0% 0% no-repeat padding-box;
     border-radius: 3rem;
     opacity: 1;
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    -webkit-box-shadow: 9px -16px 19px -9px rgba(0,0,0,0.32); 
+    box-shadow: 9px -16px 19px -9px rgba(0,0,0,0.32);
 }
-.seach-menu{
+
+.seach-menu {
     display: flex;
     justify-content: space-evenly;
+}
+
+@media (max-device-width: 414px) {
+    .map-nav {
+        left: 0.2rem;
+    }
 }

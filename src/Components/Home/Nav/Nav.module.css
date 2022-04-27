@@ -38,8 +38,6 @@
     font: 16px/18px Arial;
 }
 
-
-
 .active:hover {
     color: var(--white);
 }
@@ -55,4 +53,17 @@
 
 .button:hover {
     background-color: var(--yellow);
+}
+
+.menu li, .logo{
+    cursor: pointer;
+}
+
+@media (max-device-width: 414px) {
+    .logo{
+        font-size: 0.5rem;
+    }
+    .menu ul{
+        display: none;
+    }
 }

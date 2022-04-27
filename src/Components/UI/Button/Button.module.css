@@ -5,7 +5,12 @@
     font-weight: 900;
     font-size: 1rem;
     padding: 0.5rem 1rem;
+    cursor: pointer;
 }
 .button:hover{
     background-color: var(--yellow);
+}
+.button:disabled{
+    background-color: var(--dark-green);
+    cursor: not-allowed;
 }

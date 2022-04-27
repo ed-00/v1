@@ -1,0 +1,62 @@
+.directions {
+    height: 20vh;
+    width: 90%;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: stretch;
+}
+
+.directions p {
+    font-size: 1.3rem;
+    color: var(--green);
+    text-transform: capitalize;
+}
+
+.search {
+    border: 0.1px solid var(--gray);
+    color: var(--gray);
+    width: 100%;
+    padding-left: 0.21rem;
+}
+
+.checkbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+}
+
+.img {
+    height: 1rem;
+    width: auto;
+}
+
+.checkbox input {
+    height: 1rem;
+    width: 1rem;
+    outline: none;
+    accent-color: var(--green);
+}
+.checkbox label{
+    color: var(--gray);
+}
+
+.time{
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    height: 4rem;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.time h1 {
+    font-size: 1.2rem;
+    color: var(--gray);
+}
+.cats{
+    margin: 0 auto;
+    margin-top: 2rem;
+}

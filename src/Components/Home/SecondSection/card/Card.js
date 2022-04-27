@@ -1,17 +1,20 @@
 import React from "react";
 import classes from "./Card.module.css";
+import { motion } from "framer-motion";
 
 const Card = (props) => {
   return (
-    <div className={classes.section}>
-      <div className={classes.card}>
+    <motion.div className={classes[`card-container`]}>
+      <div className={classes.subcard}>
+        <div className={classes[`img-div`]}>
+          <img draggable="false" src={props.src} alt={props.name} />
+        </div>
+      </div>
+      <div className={classes[`card-content`]}>
         <h1>{props.name}</h1>
         <p>{props.desc}</p>
       </div>
-      <div className={classes.subcard}>
-        <img src={props.src} alt={props.name} />
-      </div>
-    </div>
+    </motion.div>
   );
 };
 

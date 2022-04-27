@@ -10,5 +10,5 @@
 .spinner-div h1 {
     font-size: 1.5rem;
     margin-top: 1em;
-    color: #fcba03;
+    color: var(--green);
 }

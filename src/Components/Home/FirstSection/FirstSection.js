@@ -3,7 +3,7 @@ import classes from "./FirstSection.module.css";
 import { Link } from "react-router-dom";
 const FirstSection = () => {
   return (
-    <section className={classes[`section`]}>
+    <section className={classes[`section`]} id="FirstSection">
       <div className={classes[`main-text`]}>
         <h1>VÄLKOMMEN TILL NEDRE DALÄLVEN!</h1>
         <p>

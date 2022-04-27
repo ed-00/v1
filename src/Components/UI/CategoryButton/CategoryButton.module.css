@@ -1,0 +1,29 @@
+.category {
+    display: inline-flex;
+    margin-right: 0.5rem;
+}
+
+.category input[type="radio"] {
+    opacity: 0;
+    position: fixed;
+    width: 0;
+}
+
+.category label {
+    display: inline-block;
+    background-color: var(--black);
+    padding: 10px 20px;
+    font-family: sans-serif, Arial;
+    font-size: 16px;
+    border: 2px solid var(--black);
+    border-radius: 4px;
+}
+
+.category input[type="radio"]:checked+label {
+    background-color: var(--white);
+    border-color: var(--green);
+}
+
+.category label:hover {
+    background-color: var(--white);
+  }

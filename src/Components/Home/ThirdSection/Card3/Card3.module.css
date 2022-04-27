@@ -3,13 +3,10 @@
     background-color: rgba(255, 255, 255, 0.882);
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.507);
     text-align: center;
-    width: 20rem;
-    height: 20rem;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-
 }
 
 .image {
@@ -29,4 +26,18 @@
     color: grey;
     font-size: 1rem;
     font-weight: 300;
+}
+
+@media (max-device-width: 414px) {
+    .card{max-width: 45%;
+    max-height: 45%;}
+    .image{
+        width: 3rem;
+    }
+    .text{
+        height: 60%;
+    }
+    .text p, text a{
+        font-size: 0.9rem;
+    }
 }
