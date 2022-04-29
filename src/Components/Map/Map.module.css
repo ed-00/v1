@@ -4,21 +4,46 @@
 }
 
 .checkboxes {
-    width: 50%;
     position: absolute;
-    z-index: 10;
+    z-index: 8;
     left: 41rem;
-    top: 1rem
+    top: 1rem;
+    display: flex;
+    align-items: center;
+    max-width: 30%;
+}
+
+.hidden {
+    overflow: hidden;
+    max-height: 1rem;
+}
+
+.checkboxes button {
+    background-color: rgba(99, 99, 99, 0.432);
+    width: 2rem;
+    height: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    left: -2rem;
+    top: 0.5rem;
+    outline: none;
+}
+
+.checkboxes button img {
+    height: 2rem;
+    width: auto;
 }
 
 ul.ks-cboxtags {
     list-style: none;
     padding: 20px;
+    max-width: 80%;
 }
 
 ul.ks-cboxtags li {
+    margin-right: 0.5rem;
     display: inline;
-    margin-right: 1rem;
 }
 
 ul.ks-cboxtags li label {
@@ -39,7 +64,7 @@ ul.ks-cboxtags li label {
 }
 
 ul.ks-cboxtags li label {
-    padding: 8px 12px;
+    padding: 0.2rem 0.4rem;
     cursor: pointer;
 }
 
@@ -51,8 +76,8 @@ ul.ks-cboxtags li label::before {
     -webkit-font-smoothing: antialiased;
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
-    font-size: 12px;
-    padding: 2px 6px 2px 2px;
+    font-size: 0.8rem;
+    padding: .2rem 0.2rem .1rem .2rem;
     content: "\2716";
     transition: transform .3s ease-in-out;
 }
@@ -77,4 +102,25 @@ ul.ks-cboxtags li input[type="checkbox"] {
 ul.ks-cboxtags li input[type="checkbox"] {
     position: absolute;
     opacity: 0;
+}
+
+.navButtons {
+    position: absolute;
+    height: 15rem;
+    justify-content: space-around;
+    z-index: 10;
+    bottom: 1.2rem;
+    left: 1rem;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+@media (max-device-width: 414px) {
+
+    .checkboxes {
+        top: 5rem;
+        left: 0.2rem;
+        max-width: 98%;
+    }
+
 }

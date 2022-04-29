@@ -1,8 +1,4 @@
 .compass {
-    position: absolute;
-    z-index: 10;
-    right: 1rem;
-    top: 2rem;
     width: 3.5rem;
     height: 3.5rem;
     border-radius: 50%;
@@ -17,13 +13,4 @@
 .compass img {
     width: 60%;
     height: auto;
-}
-
-@media (max-device-width: 414px) {
-    .compass {
-        right: 0.2rem;
-        width: 3rem;
-        height: 3rem;
-        top: 2.25rem;
-    }
 }

@@ -66,7 +66,7 @@ const FilterMenu = ({
 
   return (
     <motion.div
-      animate={{ x: -200 }}
+      animate={{ x: 200 }}
       transition={{ duration: 1 }}
       className={classes[`filter-menu`]}
     >

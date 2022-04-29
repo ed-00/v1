@@ -39,12 +39,13 @@
 }
 
 .button {
-  padding: 1rem 2rem;
+  padding: 0.7rem 2rem;
   font-size: 1.3rem;
   background-color: var(--green);
   border-radius: 3rem;
   color: var(--black);
   font-weight: 900;
+  margin:1rem;
 }
 
 .button:hover {

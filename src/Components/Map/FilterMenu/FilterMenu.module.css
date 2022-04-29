@@ -1,8 +1,8 @@
 .filter-menu {
     position: absolute;
     z-index: 10;
-    right: -12rem;
-    top: 12rem;
+    left: -12rem;
+    bottom: 11.5rem;
     background-color: var(--white);
     border-radius: 2rem;
     max-width: 20rem;

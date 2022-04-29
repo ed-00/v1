@@ -1,8 +1,4 @@
 .filter {
-    position: absolute;
-    z-index: 10;
-    right: 1rem;
-    top: 12rem;
     width: 3.5rem;
     height: 3.5rem;
     border-radius: 50%;
@@ -14,10 +10,6 @@
     box-shadow: 9px -16px 19px -9px rgba(0,0,0,0.32);
 }
 .home{
-    position: absolute;
-    z-index: 10;
-    right: 1rem;
-    top: 7rem;
     width: 3.5rem;
     height: 3.5rem;
     border-radius: 50%;
@@ -29,10 +21,7 @@
     box-shadow: 9px -16px 19px -9px rgba(0,0,0,0.32);
 }
 
-@media (max-device-width: 414px) {
-    .filter {
-        right: 0.2rem;
-        width: 3rem;
-        height: 3rem;
-    }
+.img{
+    width: 60%;
+    height: auto;
 }

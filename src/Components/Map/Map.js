@@ -1,5 +1,4 @@
 import React, { useCallback, useState, useRef, useEffect } from "react";
-import { useSelector } from "react-redux";
 import useFetch from "../../Hooks/useFech";
 
 import {
@@ -23,6 +22,8 @@ import CategoryCheckbox from "../UI/CategoryCheckbox/CategoryCheckbox";
 import FilterButton from "./FilterButton/FilterButton";
 import FilterMenu from "./FilterMenu/FilterMenu";
 
+import expandIcon from "../../icons/expand.svg";
+
 // Google map attribut
 const libraries = ["places"];
 const mapContainerStyle = {
@@ -41,11 +42,6 @@ const mainZoom = 12.9;
 
 // Map component
 const Map = () => {
-  //Fetching mechanism Works
-  const { bikingIsSelected, hikingIsSelected } = useSelector(
-    (state) => state.CategorySlice
-  );
-
   const {
     isLoading: hikingDataIsLoading,
     hasError: hikingHasError,
@@ -132,7 +128,6 @@ const Map = () => {
   }, [markerSelected]);
 
   // categories
-  const [categoryCheckbox, setCategoryCheckbox] = useState([]);
   const [visibleCategory, setVisibleCategory] = useState([]);
   const [pathsAreVisiable, setPathsAreVisiable] = useState({
     walking: true,
@@ -146,81 +141,56 @@ const Map = () => {
       });
     }
   }, [poiData]);
-  useEffect(() => {
-    if (poiData) {
-      poiData.Categories.forEach((el, index) => {
-        setCategoryCheckbox((prevState) => [
-          ...prevState,
-          <CategoryCheckbox
-            label={el.type}
-            key={el.type}
-            checked={visibleCategory[index]}
-            onChange={() => {
-              setVisibleCategory((prevState) => {
-                let newArray = prevState;
-                newArray[index] = !prevState[index];
-                return [...newArray];
-              });
-            }}
-          />,
-        ]);
-      });
-    }
-    return () => {
-      setCategoryCheckbox([]);
-    };
-  }, [poiData, visibleCategory]);
 
+  // Points logic
   const [poiPoints, setPoiPoints] = useState();
-
   useEffect(() => {
-    try {
-      if (poiData) {
-        setPoiPoints((prevState) =>
-          poiData.Categories.map((el) => {
-            return [
-              ...prevState,
+    if (poiData && isLoaded && !loadError) {
+      setPoiPoints((prevState) =>
+        poiData.Categories.map((el) => {
+          return [
+            ...prevState,
 
-              el.points.map((point, index) => {
-                return (
-                  <Marker
-                    key={index + Math.random()}
-                    icon={{
-                      url: el.icon,
-                      scaledSize: new window.google.maps.Size(40, 40),
-                    }}
-                    visible={true}
-                    position={{ lat: point.lat, lng: point.lng }}
-                    onClick={() => {
-                      panTo({ lat: point.lat, lng: point.lng + 0.019 }, true);
-                      setMarkerSelected(point);
-                      setDirectionRes(null);
-                      setDirectionMode(false);
-                      setAddPoint(null);
-                      setCenterPin(null);
-                      setFilter(false);
-                      setMaxDist(100);
-                      setDistances([]);
-                    }}
-                  />
-                );
-              }),
-            ];
-          })
-        );
-      }
-    } catch (error) {
-      console.log(error);
+            el.points.map((point, index) => {
+              return (
+                <Marker
+                  key={index + Math.random()}
+                  icon={{
+                    url: el.icon,
+                    scaledSize: new window.google.maps.Size(40, 40),
+                  }}
+                  visible={true}
+                  position={{ lat: point.lat, lng: point.lng }}
+                  onClick={() => {
+                    panTo({ lat: point.lat, lng: point.lng + 0.019 }, true);
+                    setMarkerSelected(point);
+                    setDirectionRes(null);
+                    setDirectionMode(false);
+                    setAddPoint(null);
+                    setCenterPin(null);
+                    setFilter(false);
+                    setMaxDist(100);
+                    setDistances([]);
+                  }}
+                />
+              );
+            }),
+          ];
+        })
+      );
     }
 
     return () => {
       setPoiPoints([]);
     };
-  }, [panTo, poiData]);
+  }, [isLoaded, loadError, panTo, poiData]);
   // Filter logic
   const [maxDist, setMaxDist] = useState(100);
   const [distances, setDistances] = useState([]);
   const [Filter, setFilter] = useState(false);
+
+  // Category expand
+  const [expandCategories, setExpandCategories] = useState(true);
 
   if (loadError || bikingHasError || hikingHasError || poiHasError)
     return <FourOFour />;
@@ -229,39 +199,68 @@ const Map = () => {
 
   return (
     <div className={classes.map}>
-      <LocateMe panTo={panTo} />
+      <div className={classes.navButtons}>
+        <LocateMe panTo={panTo} />
+        <FilterButton home={true} onClick={() => panTo(center, true, 10)} />
+        <FilterButton
+          onClick={() => {
+            setFilter(true);
+            exitMarkerHandler();
+            setAddPoint(null);
+            setCenterPin(null);
+          }}
+        />
+      </div>
+      <div className={classes.checkboxes}>
+        <ul className={`${classes[`ks-cboxtags`]} ${expandCategories && classes.hidden}`}>
+          <CategoryCheckbox
+            checked={pathsAreVisiable.walking}
+            label="walking Path"
+            onChange={() => {
+              setPathsAreVisiable((state) => {
+                let prevState = state;
+                prevState.walking = !prevState.walking;
+                return { ...prevState };
+              });
+            }}
+          />
 
-      {categoryCheckbox && (
-        <div className={classes.checkboxes}>
-          <ul className={classes[`ks-cboxtags`]}>
-            <CategoryCheckbox
-              checked={pathsAreVisiable.walking}
-              label="walking Path"
-              onChange={() => {
-                setPathsAreVisiable((state) => {
-                  let prevState = state;
-                  prevState.walking = !prevState.walking;
-                  return { ...prevState };
-                });
-              }}
-            />
+          <CategoryCheckbox
+            checked={pathsAreVisiable.biking}
+            label="Biking Path"
+            onChange={() => {
+              setPathsAreVisiable((state) => {
+                let prevState = state;
+                prevState.biking = !prevState.biking;
+                return { ...prevState };
+              });
+            }}
+          />
 
-            <CategoryCheckbox
-              checked={pathsAreVisiable.biking}
-              label="Biking Path"
-              onChange={() => {
-                setPathsAreVisiable((state) => {
-                  let prevState = state;
-                  prevState.biking = !prevState.biking;
-                  return { ...prevState };
-                });
-              }}
-            />
-
-            {categoryCheckbox}
-          </ul>
-        </div>
-      )}
+          {poiData &&
+            poiData.Categories.map((el, index) => (
+              <CategoryCheckbox
+                label={el.type}
+                key={el.type}
+                checked={visibleCategory[index]}
+                onChange={() => {
+                  setVisibleCategory((prevState) => {
+                    let newArray = prevState;
+                    newArray[index] = !newArray[index];
+                    return [...newArray];
+                  });
+                }}
+              />
+            ))}
+        </ul>
+        <button
+          onClick={() => {
+            setExpandCategories((prevState) => !prevState);
+          }}
+        >
+          <img src={expandIcon} alt="expand" />
+        </button>
+      </div>
 
       <MapNav
         panTo={panTo}
@@ -270,15 +269,6 @@ const Map = () => {
         }}
       />
 
-      <FilterButton
-        onClick={() => {
-          setFilter(true);
-          exitMarkerHandler();
-          setAddPoint(null);
-          setCenterPin(null);
-        }}
-      />
-      <FilterButton home={true} onClick={() => panTo(center, true, 10)} />
       {poiData && Filter && (
         <FilterMenu
           panTo={panTo}
@@ -351,7 +341,6 @@ const Map = () => {
               draggable: false,
               editable: false,
               geodesic: true,
-              visible: hikingIsSelected,
               paths: [...line.posts],
               zIndex: 1,
             };
@@ -371,7 +360,6 @@ const Map = () => {
               draggable: false,
               editable: false,
               geodesic: true,
-              visible: bikingIsSelected,
               paths: [...line.posts],
               zIndex: 1,
             };

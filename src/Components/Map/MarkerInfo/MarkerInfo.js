@@ -6,7 +6,6 @@ import exitIcon from "../../../icons/exit.svg";
 import Directions from "./Directions/Directions";
 
 const ImageSlider = (props) => (
-  //TODO
   <motion.div
     ref={props.carousel}
     className={classes[`image-container`]}
@@ -21,7 +20,6 @@ const ImageSlider = (props) => (
         right: 0,
       }}
       className={classes[`inner-container`]}
-      initial={{position: "relative", x: 0}}
     >
       {props.images &&
         props.images.map((image) => (
@@ -56,16 +54,17 @@ const MarkerInfo = ({
   setRes,
 }) => {
   const [width, setWidth] = useState(0);
-  const carousel = useRef();
+  const carouselRef = useRef(null);
 
   useEffect(() => {
-    if (images && images.length > 0)
-      setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
-
-    return () => {
-      setWidth(0);
-    };
-  }, [images, lat, lng]);
+    if (images && carouselRef.current) {
+      setWidth(
+        500 * images.length +
+          40 * images.length -
+          carouselRef.current.offsetWidth
+      );
+    }
+  }, [images]);
 
   const exitHandler = () => {
     onExit();
@@ -83,7 +82,7 @@ const MarkerInfo = ({
       {images && images.length > 0 ? (
         <ImageSlider
           width={width}
-          carousel={carousel}
+          carousel={carouselRef}
           name={name}
           images={images}
         ></ImageSlider>

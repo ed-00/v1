@@ -1,9 +1,10 @@
 .MarkerInfo {
     position: absolute;
     z-index: 10;
-    bottom: -41rem;
+    bottom: -40.1rem;
     right: 0;
     max-width: 40rem;
+    max-height: 80%;
     width: 100%;
     background-color: var(--white);
     border-radius: 1rem 0 0 0;
@@ -30,11 +31,12 @@
     text-transform: capitalize;
     color: var(--green);
     margin-top: 1rem;
+    font-size: 1rem;
 }
 
 .text p {
     text-align: center;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     color: var(--gray);
 }
 
@@ -49,17 +51,15 @@
 .inner-container {
     display: flex;
     flex-direction: row;
-    width: 100%;
     align-items: center;
 }
 
 .img {
-    min-width: 40vh;
+    min-width: 500px;
     height: 28rem;
-    margin: 0 1rem;
+    margin: 0 20px;
     display: flex;
     align-items: center;
-
 }
 
 .img img {

@@ -4,6 +4,7 @@
     justify-content: center;
     background-color: var(--dark-green);
     height: 30vh;
+    align-items: center;
 }
 
 .left{
@@ -33,6 +34,7 @@
     padding-right: 1rem;
     border: none;
     padding: 0.5 1rem;
+    cursor:pointer;
 }
 .right form button:hover{
     background-color: var(--yellow);
