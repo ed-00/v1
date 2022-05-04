@@ -42,7 +42,7 @@
     border-radius: 48px;
     opacity: 0.72;
 }
-@media (max-device-width: 414px) {
+@media (max-width: 1024px) {
     .section{
         flex-direction: column;
         justify-content: space-between;
@@ -56,7 +56,6 @@
     }
     .container{
         margin: 0 auto;
-        margin-bottom: 5rem;
         width: 90%;
 
     }

@@ -3,7 +3,7 @@
     flex-direction: row;
     justify-content: center;
     background-color: var(--dark-green);
-    height: 30vh;
+    min-height: 30vh;
     align-items: center;
 }
 
@@ -45,7 +45,7 @@
     height: 3rem;
 }
 
-@media (max-device-width: 414px) { 
+@media (max-width: 1024px) { 
     .footer{
         flex-direction: column;
         height: auto;
@@ -80,4 +80,12 @@
     }
 
 
+    @media (max-width: 280px) {
+        .right{
+          width: 50%;
+        }
+        .footer{
+            overflow: hidden;
+        }
+    }
 

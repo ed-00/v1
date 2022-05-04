@@ -79,7 +79,7 @@ const MarkerInfo = ({
       <button className={classes.exitBtn} onClick={exitHandler}>
         <img src={exitIcon} alt="exit" />
       </button>
-      {images && images.length > 0 ? (
+      {!directionMode && images && images.length > 0 ? (
         <ImageSlider
           width={width}
           carousel={carouselRef}
@@ -87,7 +87,7 @@ const MarkerInfo = ({
           images={images}
         ></ImageSlider>
       ) : (
-        <NoImage />
+        !directionMode && <NoImage />
       )}
 
       {!directionMode ? (

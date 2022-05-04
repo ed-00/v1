@@ -70,9 +70,9 @@ a {
   color: var(--green);
 }
 
-@media (max-device-width: 414px) {
+@media (max-device-width: 830px) {
   h2, h1{
-    font-size: 0.5rem;
+    font-size: 1rem;
     
   }
 }

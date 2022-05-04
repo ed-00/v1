@@ -3,7 +3,6 @@ import "./App.css";
 import { Route, Switch, Redirect } from "react-router-dom";
 import LoadingSpinner from "./Components/UI/LoadingSpinner/LoadingSpinner";
 
-
 const Map = React.lazy(() => import("./Components/Map/Map"));
 const Home = React.lazy(() => import("./Components/Home/Home"));
 function App() {
@@ -16,9 +15,11 @@ function App() {
         <Route path="/home">
           <Home />
         </Route>
-
         <Route path="/explore">
           <Map />
+        </Route>
+        <Route path="/*" exact>
+          <Redirect to="/home" />
         </Route>
       </Switch>
     </Suspense>

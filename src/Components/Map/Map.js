@@ -188,6 +188,17 @@ const Map = () => {
   const [maxDist, setMaxDist] = useState(100);
   const [distances, setDistances] = useState([]);
   const [Filter, setFilter] = useState(false);
+  const [maxDistHiking, setmaxDistHiking] = useState([]);
+  const [maxDistBiking, setmaxDistBiking] = useState([]);
+
+  useEffect(() => {
+    if (!Filter) {
+      setDistances([]);
+      setmaxDistHiking([]);
+      setmaxDistBiking([]);
+      setMaxDist(100);
+    }
+  }, [Filter]);
 
   // Category expand
   const [expandCategories, setExpandCategories] = useState(true);
@@ -204,7 +215,7 @@ const Map = () => {
         <FilterButton home={true} onClick={() => panTo(center, true, 10)} />
         <FilterButton
           onClick={() => {
-            setFilter(true);
+            setFilter((prevState) => !prevState);
             exitMarkerHandler();
             setAddPoint(null);
             setCenterPin(null);
@@ -212,7 +223,11 @@ const Map = () => {
         />
       </div>
       <div className={classes.checkboxes}>
-        <ul className={`${classes[`ks-cboxtags`]} ${expandCategories && classes.hidden}`}>
+        <ul
+          className={`${classes[`ks-cboxtags`]} ${
+            expandCategories && classes.hidden
+          }`}
+        >
           <CategoryCheckbox
             checked={pathsAreVisiable.walking}
             label="walking Path"
@@ -273,6 +288,10 @@ const Map = () => {
         <FilterMenu
           panTo={panTo}
           points={poiData}
+          bikingData={bikingData}
+          hikingData={hikingData}
+          setmaxDistHiking={setmaxDistHiking}
+          setmaxDistBiking={setmaxDistBiking}
           setMaxDist={setMaxDist}
           maxDist={maxDist}
           setDistances={setDistances}
@@ -280,8 +299,7 @@ const Map = () => {
             setFilter(false);
           }}
           onClear={() => {
-            setDistances([]);
-            setMaxDist(100);
+            setFilter(false)
           }}
         />
       )}
@@ -344,7 +362,19 @@ const Map = () => {
               paths: [...line.posts],
               zIndex: 1,
             };
-            return <Polyline key={index} path={line.posts} options={options} />;
+            if (maxDistHiking.length > 0) {
+              if (maxDistHiking[index] < maxDist) {
+                return (
+                  <Polyline key={index} path={line.posts} options={options} />
+                );
+              } else {
+                return null;
+              }
+            } else {
+              return (
+                <Polyline key={index} path={line.posts} options={options} />
+              );
+            }
           })}
         {bikingData &&
           pathsAreVisiable.biking &&
@@ -363,7 +393,19 @@ const Map = () => {
               paths: [...line.posts],
               zIndex: 1,
             };
-            return <Polyline key={index} path={line.posts} options={options} />;
+            if (maxDistBiking.length > 0) {
+              if (maxDistBiking[index] < maxDist) {
+                return (
+                  <Polyline key={index} path={line.posts} options={options} />
+                );
+              } else {
+                return null;
+              }
+            } else {
+              return (
+                <Polyline key={index} path={line.posts} options={options} />
+              );
+            }
           })}
 
         {centerPin && (

@@ -14,6 +14,10 @@ const FilterMenu = ({
   setDistances,
   onClear,
   onCancel,
+  hikingData,
+  bikingData,
+  setmaxDistHiking,
+  setmaxDistBiking,
 }) => {
   const [useCurrentP, setUseCurrentP] = useState(false);
   const checkHandler = () => {
@@ -50,6 +54,40 @@ const FilterMenu = ({
     [points.Categories, setDistances]
   );
 
+  const getDistance = useCallback((point, cordinates) => {
+    var radlat1 = (Math.PI * point.lat) / 180;
+    var radlat2 = (Math.PI * cordinates.lat) / 180;
+    var theta = point.lng - cordinates.lng;
+    var radtheta = (Math.PI * theta) / 180;
+    var dist =
+      Math.sin(radlat1) * Math.sin(radlat2) +
+      Math.cos(radlat1) * Math.cos(radlat2) * Math.cos(radtheta);
+    if (dist > 1) {
+      dist = 1;
+    }
+    dist = Math.acos(dist);
+    dist = (dist * 180) / Math.PI;
+    dist = dist * 60 * 1.1515;
+    dist = dist * 1.609344;
+    return dist;
+  }, []);
+
+  const findTheFurthestDist = useCallback(
+    (cordinates, LineArray) => {
+      return LineArray.map((line) => {
+        let maxHikingDist = 0;
+        line.posts.forEach((point) => {
+          let hikingDist = getDistance(point, cordinates);
+          if (hikingDist > maxHikingDist) {
+            maxHikingDist = hikingDist;
+          }
+        });
+        return maxHikingDist;
+      });
+    },
+    [getDistance]
+  );
+
   useEffect(() => {
     if (useCurrentP) {
       navigator.geolocation.getCurrentPosition((position) => {
@@ -58,16 +96,27 @@ const FilterMenu = ({
           lng: position.coords.longitude,
         };
         calcDist(cordinates);
+        setmaxDistBiking(findTheFurthestDist(cordinates, bikingData));
+        setmaxDistHiking(findTheFurthestDist(cordinates, hikingData));
         panTo(cordinates, true, 9.5);
       });
     }
     return () => {};
-  }, [calcDist, panTo, useCurrentP]);
+  }, [
+    bikingData,
+    calcDist,
+    findTheFurthestDist,
+    hikingData,
+    panTo,
+    setmaxDistBiking,
+    setmaxDistHiking,
+    useCurrentP,
+  ]);
 
   return (
     <motion.div
-      animate={{ x: 200 }}
-      transition={{ duration: 1 }}
+      animate={{ y: -200}}
+      transition={{ duration: 1 , ease:"easeInOut"}}
       className={classes[`filter-menu`]}
     >
       <img
@@ -79,51 +128,15 @@ const FilterMenu = ({
           onCancel();
         }}
       />
-      <h1>Filtrera</h1>
-      <p>
-        Ange en adress eller Välj din nuvarande plats för att filtererara
-        punkterna och leder baserat på avstånd{" "}
-      </p>
-      {!useCurrentP ? (
-        <MapSearch
-          placeholder="Var ifrån?"
-          panTo={(cordinates) => {
-            panTo(cordinates, true, 9.5);
-          }}
-          onClear={() => {
-            setDistances([]);
-            setMaxDist(100);
-          }}
-          onSelect={(cordinates) => {
-            calcDist(cordinates);
-          }}
-        />
-      ) : (
-        <p onClick={checkHandler} className={classes.from}>
-          Från: <img src={compass} className={classes.img} alt="compass" /> Min
-          Plats
-        </p>
-      )}
-      <div className={classes.checkbox}>
-        <label htmlFor="currentLocation">
-          Från min nuvarande plats{" "}
-          <img src={compass} className={classes.img} alt="compass" />
-        </label>
-        <input
-          type="checkbox"
-          id="currentLocation"
-          checked={useCurrentP}
-          onChange={checkHandler}
-        />
-      </div>
+      <h1>Filter</h1>
       <div className={classes.slider}>
         <p>Distans i KM</p>
         <Slider
           aria-label="Distans"
           valueLabelDisplay="auto"
-          step={0.1}
+          step={0.01}
           min={1}
-          max={100}
+          max={1000}
           value={maxDist}
           onChange={(_, value) => {
             setMaxDist(value);
@@ -152,6 +165,41 @@ const FilterMenu = ({
           }}
         />
       </div>
+
+      <div className={classes.checkbox}>
+        <label htmlFor="currentLocation">
+          Från min nuvarande plats{" "}
+          <img src={compass} className={classes.img} alt="compass" />
+        </label>
+        <input
+          type="checkbox"
+          id="currentLocation"
+          checked={useCurrentP}
+          onChange={checkHandler}
+        />
+      </div>
+      {!useCurrentP ? (
+        <MapSearch
+          placeholder="Var ifrån?"
+          panTo={(cordinates) => {
+            panTo(cordinates, true, 9.5);
+          }}
+          onClear={() => {
+            setDistances([]);
+            setMaxDist(100);
+          }}
+          onSelect={(cordinates) => {
+            calcDist(cordinates);
+            setmaxDistBiking(findTheFurthestDist(cordinates, bikingData));
+            setmaxDistHiking(findTheFurthestDist(cordinates, hikingData));
+          }}
+        />
+      ) : (
+        <p onClick={checkHandler} className={classes.from}>
+          Från: <img src={compass} className={classes.img} alt="compass" /> Min
+          Plats
+        </p>
+      )}
     </motion.div>
   );
 };

@@ -1,27 +1,29 @@
 .filter-menu {
     position: absolute;
     z-index: 10;
-    left: -12rem;
-    bottom: 11.5rem;
+    left: 5rem;
+    bottom: -11.5em;
     background-color: var(--white);
+    background-blend-mode:color-burn;
     border-radius: 2rem;
-    max-width: 20rem;
-    min-width: 25rem;
-    min-height: 30rem;
-    padding: 1rem;
+    max-width: 80vw;
+    height: 15rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    padding: 1.2rem;
+
 }
 
 .filter-menu-img{
     position: relative;
-    top: -1rem;
-    left: -12rem;
+    left: -7rem;
+
 }
 .filter-menu h1 {
     color: var(--gray);
+    font-size: 1.5rem;
 }
 
 .filter-menu p {
@@ -35,7 +37,7 @@
     background-color: var(--gray);
     color: var(--white);
     border-radius: 1rem;
-    padding-left: 1rem;
+    text-align: center;
 }
 
 .checkbox input {
@@ -77,7 +79,6 @@
 }
 .slider{
     width: 80%;
-    margin: 2rem;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
