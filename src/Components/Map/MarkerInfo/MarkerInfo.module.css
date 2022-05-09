@@ -79,9 +79,9 @@
 }
 
 .no-img {
-    min-width: 40vh;
-    height: 28rem;
-    margin: 0 1rem;
+    width: 40vh;
+    max-height: 18rem;
+    margin: 0 auto;
     display: flex;
     align-items: center;
 

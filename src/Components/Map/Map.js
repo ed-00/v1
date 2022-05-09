@@ -34,10 +34,7 @@ const center = {
   lat: 60.2242741220376,
   lng: 16.80668675723175,
 };
-const mapOptions = {
-  styles: mapStyle,
-  disableDefaultUI: true,
-};
+
 const mainZoom = 12.9;
 
 // Map component
@@ -133,11 +130,13 @@ const Map = () => {
     walking: true,
     biking: true,
   });
+  const [categoriesList, setCategoriesList] = useState([]);
 
   useEffect(() => {
     if (poiData) {
-      poiData.Categories.forEach(() => {
+      poiData.Categories.forEach((element) => {
         setVisibleCategory((prevState) => [...prevState, true]);
+        setCategoriesList((prevState) => [...prevState, element.type]);
       });
     }
   }, [poiData]);
@@ -299,14 +298,15 @@ const Map = () => {
             setFilter(false);
           }}
           onClear={() => {
-            setFilter(false)
+            setFilter(false);
           }}
         />
       )}
 
-      {addPoint && (
+      {addPoint && categoriesList && (
         <AddPoints
           point={addPoint}
+          categoriesList={categoriesList}
           setPoiData={setPoiData}
           onCancel={() => {
             setAddPoint(null);
@@ -318,10 +318,21 @@ const Map = () => {
       <GoogleMap
         center={center}
         zoom={mainZoom}
-        options={mapOptions}
+        options={{
+          styles: mapStyle,
+          mapTypeControlOptions: {
+            // eslint-disable-next-line no-undef
+            position: google.maps.ControlPosition.RIGHT_TOP,
+            // eslint-disable-next-line no-undef
+            style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
+          },
+          fullscreenControl: false,
+          streetViewControl: false,
+          zoomControl:false,
+        }}
         mapContainerStyle={mapContainerStyle}
         region="SE"
-        onClick={onMapClickHandler}
+        onDblClick={onMapClickHandler}
         onLoad={onMapLoad}
       >
         {poiPoints &&

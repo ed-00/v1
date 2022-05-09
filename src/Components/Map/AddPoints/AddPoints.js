@@ -13,7 +13,7 @@ import usePost from "../../../Hooks/usePost";
 import Button from "../../UI/Button/Button";
 import AddCategoryForm from "./AddCategoryForm/AddCategoryForm";
 
-const AddPoints = ({ point, onCancel, setPoiData }) => {
+const AddPoints = ({ point, onCancel, setPoiData, categoriesList }) => {
   const [value, setValue] = useState(null);
   const [addCategory, setAddCategory] = useState(false);
   const { loading, err, post } = usePost({
@@ -40,15 +40,20 @@ const AddPoints = ({ point, onCancel, setPoiData }) => {
     let CategoryIndex;
     let path = ".json";
 
-    if (!addCategory) {
+    if (
+      !addCategory ||
+      categoriesList.some(
+        (cat) => cat.toLowerCase() === value.type.toLowerCase()
+      )
+    ) {
       setPoiData((prevState) => {
         var oldPoint = prevState.Categories.findIndex((el, index) => {
           CategoryIndex = index;
-          return el.type === value.type;
+          return el.type.toLowerCase() === value.type.toLowerCase();
         });
 
         var oldlist = prevState;
-        oldlist.Categories[oldPoint].points.push({...req});
+        oldlist.Categories[oldPoint].points.push({ ...req });
         arr = oldlist.Categories[oldPoint].points;
 
         return { ...oldlist };

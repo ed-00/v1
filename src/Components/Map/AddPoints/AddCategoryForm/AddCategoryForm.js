@@ -11,13 +11,16 @@ const AddCategoryForm = ({ setAddCategory, setValue, lat, lng }) => {
     }
     setErr("Namet är tom...");
   };
+
   const nameChangeHandler = (event) => {
     setErr("");
     setCategoryName(event.target.value);
   };
+
   const backHandler = () => {
     setAddCategory(false);
   };
+
   return (
     <div className={classes.form}>
       <h1 htmlFor="category-name" className={classes.label}>
