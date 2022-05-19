@@ -322,9 +322,9 @@ const Map = () => {
           styles: mapStyle,
           mapTypeControlOptions: {
             // eslint-disable-next-line no-undef
-            position: google.maps.ControlPosition.RIGHT_TOP,
+            position: google.maps.ControlPosition.BOTTOM_CENTER,
             // eslint-disable-next-line no-undef
-            style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
+            style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
           },
           fullscreenControl: false,
           streetViewControl: false,

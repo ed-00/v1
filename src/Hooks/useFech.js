@@ -6,6 +6,7 @@ const useFetch = (url) => {
   const [hasError, setHasError] = useState(null);
   const [data, setData] = useState(null);
 
+
   const fetchGeoData = useCallback(() => {
     setIsLoading(true);
     axios(url)
