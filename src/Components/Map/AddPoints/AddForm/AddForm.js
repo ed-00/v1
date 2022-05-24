@@ -39,7 +39,7 @@ const AddForm = ({ submit }) => {
       formData.append("upload_preset", process.env.REACT_APP_UPLOAD_PRESET);
       const res = await fetch(url, { method: "post", body: formData });
       const data = await res.json();
-      const image = { src: data.url };
+      const image = { src: data.secure_url };
       setImges((PrevImges) => [...PrevImges, image]);
       setLoading(false);
     });

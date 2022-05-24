@@ -75,14 +75,15 @@ const FilterMenu = ({
   const findTheFurthestDist = useCallback(
     (cordinates, LineArray) => {
       return LineArray.map((line) => {
-        let maxHikingDist = 0;
+        let minHikingDist = 0;
         line.posts.forEach((point) => {
           let hikingDist = getDistance(point, cordinates);
-          if (hikingDist > maxHikingDist) {
-            maxHikingDist = hikingDist;
+          minHikingDist = hikingDist;
+          if (hikingDist <= minHikingDist) {
+            minHikingDist = hikingDist;
           }
         });
-        return maxHikingDist;
+        return minHikingDist;
       });
     },
     [getDistance]
@@ -115,8 +116,8 @@ const FilterMenu = ({
 
   return (
     <motion.div
-      animate={{ y: -200}}
-      transition={{ duration: 1 , ease:"easeInOut"}}
+      animate={{ y: -200 }}
+      transition={{ duration: 1, ease: "easeInOut" }}
       className={classes[`filter-menu`]}
     >
       <img
