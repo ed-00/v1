@@ -64,7 +64,7 @@ const AddPoints = ({ point, onCancel, setPoiData, categoriesList }) => {
       var categoryObject = {
         type: value.type,
         points: [{ ...req }],
-        icon: "https://res.cloudinary.com/djt2jlqzc/image/upload/v1650972442/POI-Icons/UserAddedIcon_ej3mjx.svg",
+        icon: "https://res.cloudinary.com/djt2jlqzc/image/upload/v1662638933/gis/vjmr2arsxz6ipbbtvphg.svg",
       };
 
       setPoiData((prevState) => {

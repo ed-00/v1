@@ -323,6 +323,7 @@ const Map = () => {
           fullscreenControl: false,
           streetViewControl: false,
           zoomControl:false,
+          mapTypeControl: false
         }}
         mapContainerStyle={mapContainerStyle}
         region="SE"
