@@ -320,12 +320,6 @@ const Map = () => {
         zoom={mainZoom}
         options={{
           styles: mapStyle,
-          mapTypeControlOptions: {
-            // eslint-disable-next-line no-undef
-            position: google.maps.ControlPosition.BOTTOM_CENTER,
-            // eslint-disable-next-line no-undef
-            style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
-          },
           fullscreenControl: false,
           streetViewControl: false,
           zoomControl:false,
