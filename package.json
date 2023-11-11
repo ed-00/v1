@@ -12,7 +12,7 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.0.0",
     "@testing-library/user-event": "^13.2.1",
-    "axios": "^0.26.1",
+    "axios": "^1.6.0",
     "cloudinary": "^1.29.1",
     "cloudinary-react": "^1.7.2",
     "firebase-tools": "^11.8.0",
